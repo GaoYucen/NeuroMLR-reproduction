@@ -1,0 +1,13 @@
+geopandas==0.8.2
+haversine==2.3.0
+matplotlib==3.3.4
+model==0.6.0
+networkx==2.5
+numpy==1.20.1
+pandas==1.2.2
+scikit_learn==0.24.1
+scipy==1.6.0
+termcolor==1.1.0
+torch==1.6.0
+torch_geometric==1.7.2
+tqdm==4.56.2
