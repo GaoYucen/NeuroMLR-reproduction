@@ -1,7 +1,7 @@
 <!-- README.md -->
 
-# NeuroMLR: Robust & Reliable Route Recommendation on Road Networks
-This repository is the official implementation of __NeuroMLR: Robust & Reliable Route Recommendation on Road Networks__.
+# NeuroMLR-reproduction
+This repository is a reproduction of __NeuroMLR: Robust & Reliable Route Recommendation on Road Networks__ implemented by Silin Ma, a master's student at Shanghai Jiaotong University.
 
 ## Introduction
 Predicting the most likely route from a source location to a destination is a core functionality in mapping services. Although the problem has been studied in the literature, two key limitations remain to be addressed. First, a significant portion of the routes recommended by existing methods fail to reach the destination. Second, existing techniques are transductive in nature; hence, they fail to recommend routes if unseen roads are encountered at inference time. We address these limitations through an inductive algorithm called NEUROMLR. NEUROMLR learns a generative model from historical trajectories by conditioning on three explanatory factors: the current location, the destination, and real-time traffic conditions. The conditional distributions are learned through a novel combination of Lipschitz embeddings with Graph Convolutional Networks (GCN) on historical trajectories.
