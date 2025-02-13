@@ -1,7 +1,7 @@
 <!-- README.md -->
 
 # NeuroMLR-reproduction
-This repository is a reproduction of __NeuroMLR: Robust & Reliable Route Recommendation on Road Networks__ implemented by Silin Ma, a master's student at Shanghai Jiaotong University.
+This repository is a reproduction of __NeuroMLR: Robust & Reliable Route Recommendation on Road Networks__ , implemented by Silin Ma, a master's student at Shanghai Jiaotong University, with updated dependencies installation guide for those facing some issues regarding CUDA, PyTorch and PyTorch Geometric compatibility.
 
 ## Introduction
 Predicting the most likely route from a source location to a destination is a core functionality in mapping services. Although the problem has been studied in the literature, two key limitations remain to be addressed. First, a significant portion of the routes recommended by existing methods fail to reach the destination. Second, existing techniques are transductive in nature; hence, they fail to recommend routes if unseen roads are encountered at inference time. We address these limitations through an inductive algorithm called NEUROMLR. NEUROMLR learns a generative model from historical trajectories by conditioning on three explanatory factors: the current location, the destination, and real-time traffic conditions. The conditional distributions are learned through a novel combination of Lipschitz embeddings with Graph Convolutional Networks (GCN) on historical trajectories.
@@ -25,7 +25,30 @@ pip install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-
 pip install --no-index torch-sparse -f https://pytorch-geometric.com/whl/torch-1.6.0+cu102.html
 pip install --no-index torch-cluster -f https://pytorch-geometric.com/whl/torch-1.6.0+cu102.html
 pip install --no-index torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.6.0+cu102.html
-pip install torch-geometric
+pip install torch-geometric==1.7.2
+```
+### N.B
+If you don't have CUDA installed on your machine, you can try to install it through PyTorch own repository by running the following command on Windows or Linux machines -
+
+```bash
+conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
+```
+or if you prefer to use pip instead
+
+```bash
+pip install torch==1.6.0 torchvision==0.7.0
+```
+Then, remove torch==1.6.0 and torchvision==0.7.0 these two lines from the requirements.txt file and proceed with the installation of the other dependencies by running
+```bash
+pip install -r requirements.txt
+```
+Followed by the installation of torch-scatter, torch-sparse, torch-cluster, torch-spline-conv through - 
+```bash
+pip install torch-scatter==2.0.6 torch-sparse==0.6.9 torch-cluster==1.5.9 torch-spline-conv==1.2.1
+```
+And finally install Pytorch Geometric
+```bash
+pip install torch-geometric==1.7.2
 ```
 
 ### Data
