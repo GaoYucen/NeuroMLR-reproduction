@@ -31,7 +31,7 @@ pip install torch-geometric==1.7.2
 If you don't have CUDA installed on your machine, you can try to install it through PyTorch own repository by running the following command on Windows or Linux machines -
 
 ```bash
-conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
+conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.2 -c pytorch
 ```
 or if you prefer to use pip instead
 
